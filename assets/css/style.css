@@ -148,6 +148,37 @@ body {
     margin: 0 auto;
 }
 
+/* container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 0 10%;
+        
+    }
+
+    .template_box {
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        margin: 0 5%;
+        
+    }
+
+    .template_box {
+        padding: 0 16px;
+    }
+}
+
+
 /* button styles */
 
 .btn {
@@ -180,27 +211,26 @@ body {
     filter: brightness(110%);
 }
 
-
 .ResetPassword {
     background: var(--Light-mode-email-bg, #F6F8FC);
     padding: 24px 0;
 }
 
 .template_box {
-    background: var(--Light-mode-bg);
-    width: 600px;
+    width: 100%;
     height: 402px;
     border-radius: 16px;
     background: var(--White, #FFF);
 }
 
 .template_box_reset_password {
+    width: 100%;
     padding: 32px 0 40px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    
+    background: var(--White, #FFF);
 }
 
 .ResetPassword .logotype {
@@ -208,6 +238,7 @@ body {
 }
 
 .ResetPassword  .content_box {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -217,24 +248,25 @@ body {
     color: var(--Dark-Blue);
     text-align: center;
     font-family: Arial;
-    font-size: 16px;
+    font-size: clamp(12px, 100vw, 16px);
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
 }
+
 .ResetPassword .btn {
     margin-top: 24px;
 }
-.btn-blue {
 
-}
+
+
 .content_inner_text {
     color: var(--Light-mode-text, #9CA2AF);
     text-align: center;
 
     /* Email/16 Regular */
     font-family: Arial;
-    font-size: 16px;
+    font-size: clamp(12px, 100vw, 16px);
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
@@ -260,14 +292,14 @@ body {
     /*  */
 }
 
-.social-media-icon {
-    // styles icon
+.social-media-icon{
+    /*  */
+}
 
-    &:hover{
-        /* hover effect */
-        filter: brightness(90%);
-        transition: 300ms;
-    }
+.social-media-icon:hover{
+    /* hover effect */
+    filter: brightness(90%);
+    transition: 300ms;
 }
 
 .other-links-box {
